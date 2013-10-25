@@ -3,6 +3,7 @@
   %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %title= data.page.title || "Eternal Contrast"
     = stylesheet_link_tag "bootstrap", "font-awesome" ,"style"
     %script{:src => "http://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"}
@@ -15,7 +16,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               %a#menu-button{:href=>"javaScript:void(0);"}
-                %i.icon-reorder
+                %i.icon-reorder.primary-text-color
     = partial "layouts/main_menu"
     .main-contents
       = yield

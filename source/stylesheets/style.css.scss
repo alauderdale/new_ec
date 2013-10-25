@@ -93,7 +93,7 @@
 $primary-color: #22892a;
 $light-gray-color: #f0f1ed;
 $gray-color:#dddddd;
-$text-color: #4c4c4c;
+$text-color: #646464;
 $black-color:#111111;
 
 // font vars
@@ -224,6 +224,11 @@ blockquote{
   }
 }
 
+.white-text{
+  h1,h2,h3,h4,h5,h6,p,a,blockquote{
+    color:white!important;
+  }
+}
 
 
 // display
@@ -544,19 +549,23 @@ background-position: center center;
 transition: transform 0.5s, opacity 0 0.6s;
 overflow-y: scroll;
 padding:0 $baseline $baseline*3 $baseline;
-a{
-  h1{
-    @include transition-duration(.3s);
-    color:$primary-color;
-    font-family:$light-font-name;
-  }
-  &:hover{
+  a{
     h1{
-      color:shade($primary-color,50%);
+      @include transition-duration(.3s);
+      color:$primary-color;
+      font-family:$light-font-name;
+      margin:0;
+    }
+    &:hover{
+      h1{
+        color:shade($primary-color,50%);
 
+      }
     }
   }
-}
+  section{
+    padding:$baseline*2 0;
+  }
 }
 
 nav.menu-show{
@@ -596,14 +605,6 @@ img.home-icon{
   height:100px;
 }
 
-
-@media (max-width: 640px) {
-  h1{
-    font-size:3em;
-    line-height:$baseline*2;
-  }
-
-}
 
 //dribbble portfolio
 
@@ -676,4 +677,22 @@ background-color:black;
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
+}
+
+//portfolio
+
+//mianzi
+
+.gray-text-box{
+  background-color:rgba(44,56,62,.67);
+}
+
+
+//responsiveify
+
+@media (max-width: 640px) {
+  h1,blockquote{
+    font-size:3em;
+    line-height:$baseline*2;
+  }
 }
