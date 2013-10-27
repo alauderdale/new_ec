@@ -90,7 +90,7 @@
 
 // color vars
 
-$primary-color: #22892a;
+$primary-color: #2eb350;
 $light-gray-color: #f0f1ed;
 $gray-color:#dddddd;
 $text-color: #646464;
@@ -265,6 +265,10 @@ blockquote{
 
 .full-width{
     width:100%;
+}
+
+.max-width{
+    max-width:100%;
 }
 
 .display-block{
@@ -685,6 +689,17 @@ background-color:black;
 
 .gray-text-box{
   background-color:rgba(44,56,62,.67);
+}
+
+
+//footer
+
+footer{
+  background-color:$primary-color;
+  padding:$baseline*2 0;
+  p,a{
+    color:white;
+  }
 }
 
 
