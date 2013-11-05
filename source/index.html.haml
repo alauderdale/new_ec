@@ -1,3 +1,19 @@
+:javascript
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top-50
+				}, 1500);
+				return false;
+			}
+		}
+		});
+	});
+
 %section.primary-bg.invert-section
 	.container
 		.row
@@ -10,8 +26,8 @@
 					We are a design company in Boulder, CO.
 					%br 
 					We offer web development & design services.
-				%a.btn.btn-xl.btn-default.btn-invert.double-margin-bottom{:href=>"#work"}
-					See Our Work
+				%a.btn.btn-xl.btn-default.btn-invert.double-margin-bottom#see{:href=>"#work"}
+					See The Work
 			.col-md-4.col-sm-4
 				%img.max-width{:src=>"images/wire.png"}
 %section
@@ -28,24 +44,25 @@
 		.row
 			.col-md-4.col-sm-4
 				.padded
-					%img.margin-bottom.home-icon{:src=>"images/ux_icon.png"}
+					%img.double-margin-bottom.home-icon{:src=>"images/ux_icon.png"}
 						%h4
 							UX
 						%p
 							Mauris erat orci, gravida at tortor eu, dictum congue quam. Aliquam feugiat quam ac dolor feugiat, non pharetra metus auctor. Pellentesque venenatis 
 			.col-md-4.col-sm-4
 				.padded
-					%img.margin-bottom.home-icon{:src=>"images/design_icon.png"}
+					%img.double-margin-bottom.home-icon{:src=>"images/design_icon.png"}
 						%h4
 							Design
 						%p
 							Mauris erat orci, gravida at tortor eu, dictum congue quam. Aliquam feugiat quam ac dolor feugiat, non pharetra metus auctor. Pellentesque venenatis 
 			.col-md-4.col-sm-4
 				.padded
-					%img.margin-bottom.home-icon{:src=>"images/dev_icon.png"}
+					%img.double-margin-bottom.home-icon{:src=>"images/dev_icon.png"}
 						%h4
 							Develop
 						%p
 							Mauris erat orci, gravida at tortor eu, dictum congue quam. Aliquam feugiat quam ac dolor feugiat, non pharetra metus auctor. Pellentesque venenatis 
-= partial "layouts/work_menu"
+#work
+	= partial "layouts/work_menu"
 = partial "layouts/dribbble"

@@ -94,6 +94,7 @@ $primary-color: #2eb350;
 $light-gray-color: #f0f1ed;
 $gray-color:#dddddd;
 $text-color: #646464;
+$dark-text-color: #4a4a4a;
 $black-color:#111111;
 
 // font vars
@@ -141,6 +142,10 @@ h1, h2, h3, h4, h5, h6, p {
   color:$text-color;
 }
 
+h1, h2, h3, h4, h5, h6{
+  color:$dark-text-color;
+}
+
 h1,h2,h3,h4{
   font-family:$extra-bold-font-name;
 }
@@ -154,7 +159,7 @@ h5,h6{
   font-family:$medium-font-name;
 }
 
-p  {font-size: 1em; line-height:$baseline;}
+p  {font-size: 1em; line-height:$baseline*1.1;}
 h1 { font-size: 4.5em; line-height:$baseline*3.5;}
 h2 { font-size: 2.5em; line-height:$baseline*1.5;}
 h3 { font-size: 1.5em; line-height:$baseline*1.2;}
@@ -206,7 +211,7 @@ blockquote{
     font-family:$medium-font-name;
 }
 .bold-font-name{
-    font-family:$bold-font-name;
+    font-family:$bold-font-name!important;
 }
 .extra-bold-font-name{
     font-family:$extra-bold-font-name;
@@ -557,6 +562,7 @@ overflow-y: scroll;
 padding:0 $baseline $baseline*3 $baseline;
 p{
   color:white;
+  font-family:$regular-font-name;
   &.header{
     font-family:$extra-bold-font-name;
     font-size:.9em;
@@ -585,7 +591,8 @@ ul{
       color:rgba(255,255,255,.8);
       font-family:$extra-bold-font-name;
       margin:0;
-      font-size:2em;
+      font-size:1.5em;
+      line-height:$baseline*1.5;
     }
     &:hover{
       color:white;
@@ -596,7 +603,7 @@ ul{
     }
   }
   section{
-    padding:$baseline/4 0;
+    padding: $baseline 0;
   }
 }
 
