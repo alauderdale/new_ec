@@ -530,10 +530,11 @@ a{
 }
 
 a.logo{
-  background:url(../images/logo.png) no-repeat;
+  background:url(../images/logo@2x.png) no-repeat;
   width:252px;
   height:21px;
   margin-top:$baseline/2;
+  background-size:100%;
 }
 
 
