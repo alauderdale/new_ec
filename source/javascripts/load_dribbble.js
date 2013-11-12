@@ -31,9 +31,10 @@ $(document).ready(function () {
 	    var html = [];
 
 	    $.each(playerShots.shots, function (i, shot) {
-	        html.push('<div class="shot"><a href="' + shot.url + '">');
+	        // html.push('<div class="shot"><a href="' + shot.url + '">');
+	        html.push('<div class="shot">');
 	        html.push('<img src="' + shot.image_url + '" ');
-	        html.push('alt="' + shot.title + '"></a></div>');
+	        html.push('alt="' + shot.title + '"></div>');
 	    });
 
 	    $('#dribbble-portfolio').html(html.join(''));
