@@ -495,14 +495,13 @@ ul.inline{
 
 a{
   color:$primary-color;
-  &:hover{
-    text-decoration:none;
-  }
+  text-decoration:underline;
 }
 
 //buttons
 
 .btn{
+  text-decoration:none;
   font-family:$extra-bold-font-name;
   @include transition-duration(.3s);
   font-size:1.2em;
