@@ -159,7 +159,7 @@ h5,h6{
   font-family:$medium-font-name;
 }
 
-p  {font-size: 1.2em; line-height:$baseline*1.1;}
+p  {font-size: 1em; line-height:$baseline*1.2;}
 h1 { font-size: 5.5em; line-height:$baseline*3.5;}
 h2 { font-size: 2.5em; line-height:$baseline*1.6;}
 h3 { font-size: 1.6em; line-height:$baseline*1.3;}
@@ -650,12 +650,36 @@ section{
   &.dribbble{
     background:url(../images/dribbble_bg.png) no-repeat right;
   }
+  &.work-menu-item{
+    height:600px;
+    overflow:hidden;
+  }
 }
 
 //home
 
 img.home-icon{
   height:100px;
+  opacity:.5;
+  @include transition-duration(.5s);
+  &:hover{
+    opacity:1;
+  }
+}
+
+//slider
+
+ol.carousel-indicators{
+  li{
+    width: 20px;
+    height: 20px;
+    background-color:rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.5);
+    &.active{
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
 
 
