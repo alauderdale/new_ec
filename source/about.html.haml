@@ -1,3 +1,14 @@
+= javascript_include_tag "jquery-ui.min", "jquery.beforeafter"
+:javascript
+	$(function(){
+		$('#before-after').beforeAfter({
+			animateIntro: true,
+			showFullLinks: false,
+			enableKeyboard: true
+
+		});
+	});
+
 %section.primary-bg.invert-section.no-padding-bottom{style:"background-image:url(images/about_bg.jpg);"}
 	.container
 		.row
@@ -5,9 +16,9 @@
 				%img.max-width.no-margin-bottom{:src=>"images/me.png"}
 			.col-md-6.col-sm-6
 				%h1
-					Me
+					Me: Alex Lauderdale
 				%h3.double-margin-bottom
-					I live in colorfull Colorado & I live and breathe design. I've been designing and building the web full time for 
+					I live in colorfull Colorado. I've been designing & building the web full time for 
 					%strong
 						4 years.
 				%a.btn.btn-xl.btn-default.btn-invert.double-margin-bottom#see{:href=>"makeena.html"}
@@ -21,12 +32,18 @@
 					%h2
 						I Solve Products
 					%h3.triple-margin-bottom.no-margin-bottom
-						Good design is systematic. Your product deserves more than a pretty face. Let's build something with rhyme and reason.  
+						Your product deserves more than a pretty face. Let's build something with rhyme and reason.  
 			.col-md-2
 		.row
 			.col-md-12
 				.text-center
-					%img.max-width.triple-margin-top{:src=>"images/about_graphic.jpg"}
+					#before-after{:style=>"margin:0 auto;"}
+						%div
+							%img{alt: "before", height: "2544", src: "images/before.jpg", width: "500"}
+						%div
+							%img{alt: "after", height: "2544", src: "images/after.jpg", width: "500"}
+					#before-after-holder
+						%img.max-width.triple-margin-top{:src=>"images/about_graphic.jpg"}
 %section
 	.container
 		.row

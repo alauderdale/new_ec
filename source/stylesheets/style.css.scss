@@ -497,7 +497,7 @@ a{
   color:$primary-color;
   &:hover{
     text-decoration:none;
-    color:shade($primary-color,50%);
+    color:tint($primary-color,20%);
   }
   &.arrow{
     font-size:1.2em;
@@ -658,6 +658,11 @@ section{
     height:600px;
     overflow:hidden;
   }
+  &#home-hero{
+
+    background: $primary-color url(../images/hero_bg.png) no-repeat center center fixed; 
+    @include background-size(cover);
+  }
 }
 
 //home
@@ -684,6 +689,20 @@ ol.carousel-indicators{
       height: 22px;
     }
   }
+}
+
+//about
+
+#before-after{
+  cursor:col-resize;
+  margin-top:$baseline*3!important;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+  background:url(../images/browser-top.jpg) no-repeat top;
+  padding-top:30px!important;
+
+}
+#before-after-holder{
+  display:none;
 }
 
 
@@ -802,6 +821,13 @@ footer{
         font-size:.8em;
       }
     }
+  }
+
+  #before-after{
+    display:none;
+  }
+  #before-after-holder{
+    display:block;
   }
 
 
