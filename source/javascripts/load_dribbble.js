@@ -38,7 +38,7 @@ $(document).ready(function () {
 	    });
 
 	    $('#dribbble-portfolio').html(html.join(''));
-	}, {page: 1, per_page: 50});
+	}, {page: 1, per_page: 48});
 
 
 });
