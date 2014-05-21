@@ -18,12 +18,9 @@
 %section.section.primary-bg.invert-section#home-hero{:'data-speed' => "2", :'data-type' => "background"}
 	.container
 		.row
-			.col-md-8.col-sm-8
+			.col-md-8.col-sm-12
 				%h1.text-uppercase
-					Design
-					%br 
-					Is more than
-					%br
+					Design Is more than
 					Pushing Pixels
 				%h3.double-margin-bottom
 					It is an exciting approach to solving problems. 
@@ -31,7 +28,7 @@
 					Let's have some fun solving yours. 
 				%a.btn.btn-xl.btn-default.btn-invert.double-margin-bottom#see{:href=>"#work"}
 					See the Work
-			.col-md-4.col-sm-4
+			.col-md-4.hidden-sm.hidden-xs
 				%img.max-width{:src=>"images/wire.png"}
 %section
 	.container
@@ -40,7 +37,11 @@
 			.col-md-10.col-sm-10
 				.text-center
 					%h2
-						I am proud to offer a full spectrum of design solutions. 
+						%span.regular-font-name{:style=>"font-size:1.8em; position:relative; right:-10px;"}
+							%a{:href=>"about.html"}
+								*
+						I am proud to offer a full spectrum of design solutions.
+
 			.col-md-1.col-sm-1
 		.row
 			.col-md-4.col-sm-4
@@ -50,7 +51,7 @@
 							Web Design & UX
 						%p
 							A good user interface should be not only functional, but pleasant to. Let's raise the bar and create a better experience.
-						%a.arrow{:href=>"wli.html"}
+						%a.arrow{:href=>"wellhire.html"}
 							View something I improved
 			.col-md-4.col-sm-4
 				.padded

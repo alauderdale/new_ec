@@ -490,6 +490,10 @@ ul.inline{
   height:auto;
 }
 
+.img-shadow{
+  box-shadow:0 0 15px rgba(0,0,0,.1) ;
+}
+
 
 //links
 
@@ -510,6 +514,9 @@ a{
     &:hover{
       padding-right:40px;
     }
+  }
+  &.link-underline{
+    text-decoration:underline;
   }
 }
 
@@ -647,16 +654,12 @@ nav.menu-show{
 section{
   padding:$baseline*3 0;
   &.invert-section{
-    h1,h2,h3,h4,h5,h6,p{
+    h1,h2,h3,h4,h5,h6,p,a{
       color:white;
     }
   }
   &.dribbble{
     background:url(../images/dribbble_bg.png) no-repeat right;
-  }
-  &.work-menu-item{
-    height:600px;
-    overflow:hidden;
   }
   &#home-hero{
 
@@ -664,6 +667,8 @@ section{
     @include background-size(cover);
   }
 }
+
+
 
 //home
 
@@ -688,6 +693,13 @@ ol.carousel-indicators{
       width: 22px;
       height: 22px;
     }
+  }
+}
+
+.slide{
+  section{
+    height:600px;
+    overflow:hidden;
   }
 }
 
