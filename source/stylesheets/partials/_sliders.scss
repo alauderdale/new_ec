@@ -1,0 +1,133 @@
+//sliders
+
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+#work-slider{
+  ol.carousel-indicators{
+    li{
+    width: 20px;
+    height: 20px;
+    background-color:rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.5);
+      &.active{
+      background: white;
+      width: 22px;
+      height: 22px;
+      }
+    }
+  }
+  .slide{
+    section{
+      height:600px;
+      overflow:hidden;
+    }
+  }
+}
+
+.macbook-bg{
+  background:url(../images/evercheck/bg_macbook.png) center; 
+  background-size:123%;
+  #carousel-macbook{
+      padding:13%;
+      .item{
+        img{
+          border-radius:4px;        
+        }
+      }
+    .carousel-control{
+      background:none;
+      width:50%;
+      &.left{
+            cursor: url(../images/gallery-arrow-prev.png) 15 9,e-resize ;
+      }
+      &.right{
+            cursor: url(../images/gallery-arrow-next.png) 15 9,e-resize ;
+      }
+      &:hover{
+        background:none;
+      }
+    }
+  }
+}
+
+
+.browser-bg{
+  background:url(../images/evercheck/browser_bg.png) center no-repeat; 
+  background-size:83.9%;
+  #carousel-browser{
+      padding:10.5%;
+    .carousel-control{
+      background:none;
+      width:50%;
+      &.left{
+            cursor: url(../images/gallery-arrow-prev.png) 15 9,e-resize ;
+      }
+      &.right{
+            cursor: url(../images/gallery-arrow-next.png) 15 9,e-resize ;
+      }
+      &:hover{
+        background:none;
+      }
+    }
+  }
+}
+
+
+
+
+.app-bg-bg{
+  background:url(../images/evercheck/phones_bg.png) center 70% no-repeat; 
+  background-size:100%;
+}
+
+.app-bg{
+  background:url(../images/evercheck/phone_bg.png) center no-repeat; 
+  background-size:70%;
+  #carousel-app{
+      padding:24%;
+    .carousel-control{
+      background:none;
+      width:50%;
+      &.left{
+            cursor: url(../images/gallery-arrow-prev.png) 15 9,e-resize ;
+      }
+      &.right{
+            cursor: url(../images/gallery-arrow-next.png) 15 9,e-resize ;
+      }
+      &:hover{
+        background:none;
+      }
+    }
+  }
+}

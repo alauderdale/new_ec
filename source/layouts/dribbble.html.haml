@@ -1,5 +1,5 @@
 = javascript_include_tag "isotope.js", "dribbble", "load_dribbble.js"
-%section.dribbble{:style=>"background-color:#f2f2f2;"}
+%section.dribbble-container.no-padding-bottom{:style=>"background-color:#f2f2f2;"}
 	.container
 		.row
 			.col-md-7.col-sm-7
@@ -12,12 +12,15 @@
 					Below is some of my recent work from Dribbble.
 					%a{:href=>"http://dribbble.com/Alauderdale10"}
 						View my Dribbble portfolio
-%section.no-padding-top.no-padding-bottom
-	#dribbble-portfolio
-	%section.inverse-section{:style=>"background-color:#ea4c89;"}
-		.container
-			.row
-				.col-lg-12
-					%a.btn.btn-invert.btn-block{:href=>"http://dribbble.com/Alauderdale10?page=5"}
-						More Dribbble Shots
+%section.no-padding-top.no-padding-bottom{:style=>"background-color:#f2f2f2;"}
+	.container
+		#dribbble-items.masonry-grid
+			.grid-sizer
+			.gutter-sizer
+%section.inverse-section{:style=>"background-color:#ea4c89;"}
+	.container
+		.row
+			.col-lg-12
+				%a.btn.btn-invert.btn-block{:href=>"http://dribbble.com/Alauderdale10?page=5"}
+					More Dribbble Shots
 
